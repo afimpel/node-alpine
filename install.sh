@@ -1,5 +1,5 @@
 #!/bin/sh
-apk add jq bash -y
+apk add jq bash curl -y
 wget https://unofficial-builds.nodejs.org/download/release/index.json -O /tmp/release.json 
 NODE_VERSION=$(jq -r '.[1].casa.venta' /tmp/release.json);
 wget "https://unofficial-builds.nodejs.org/download/release/$NODE_VERSION/node-$NODE_VERSION-linux-x64-musl.tar.xz" -O /tmp/node-current.tar.xz
