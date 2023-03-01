@@ -1,2 +1,2 @@
-# node-alpine
+# nodejs-alpine
 install node to alpine linux,
