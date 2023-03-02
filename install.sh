@@ -1,5 +1,6 @@
 #!/bin/sh
 apk add jq bash curl
+rm -vf /usr/local/bin/nod* /usr/local/bin/yar*
 wget --no-cache https://unofficial-builds.nodejs.org/download/release/index.json -O /tmp/release.json 
 NODE_VERSION=$(jq -r '.[0].version' /tmp/release.json);
 wget --no-cache "https://unofficial-builds.nodejs.org/download/release/$NODE_VERSION/node-$NODE_VERSION-linux-x64-musl.tar.xz" -O /tmp/node-current.tar.xz
