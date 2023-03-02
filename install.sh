@@ -6,7 +6,7 @@ wget --no-cache "https://unofficial-builds.nodejs.org/download/release/$NODE_VER
 tar -xJf "/tmp/node-current.tar.xz" -C /usr/local --strip-components=1 --no-same-owner
 ln -s /usr/local/bin/node /usr/local/bin/nodejs
 corepack enable
-npm install --global yarn nodemon pm2 npm
+npm install --global nodemon pm2 npm yarn
 yarn set version stable
 echo "nodeJS: $(node --version)"
 echo "NPM: $(npm --version)"
