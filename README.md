@@ -5,3 +5,6 @@ install node to alpine linux,
 ## Current Version ...
 
 ``` wget --no-cache -O - https://raw.githubusercontent.com/afimpel/nodejs-alpine/main/install-current.sh | sh ``` 
+## LTS Version ...
+
+``` wget --no-cache -O - https://raw.githubusercontent.com/afimpel/nodejs-alpine/main/install-lts.sh | sh ``` 
