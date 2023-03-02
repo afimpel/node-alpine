@@ -2,8 +2,9 @@
 apk add jq bash curl
 rm -f /usr/local/bin/nod* /usr/local/bin/yar*
 wget --no-cache https://unofficial-builds.nodejs.org/download/release/index.json -O /tmp/release.json 
-NODE_VERSION=$(jq -r '.[0].version' /tmp/release.json);
-NODE_DATE=$(jq -r '.[0].date' /tmp/release.json);
+jq -r '[.[]| select(.lts==false)]' /tmp/release.json > /tmp/release-current.json 
+NODE_VERSION=$(jq -r '.[0].version' /tmp/release-current.json);
+NODE_DATE=$(jq -r '.[0].date' /tmp/release-current.json);
 clear
 echo -e "Current NodeJS: ${NODE_VERSION} | ${NODE_DATE} \n"
 echo -e "Install Current Version ... \n"
