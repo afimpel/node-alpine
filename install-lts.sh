@@ -11,7 +11,7 @@ if [ $UUID != 0 ]; then
         exit 1;
 else
     apk add jq bash curl
-    rm -frv /usr/local/bin/nod* /usr/local/bin/yar* /tmp/node-* /usr/local/lib/node_modules /usr/local/bin/pnpm /usr/local/bin/less /usr/local/bin/n
+    rm -frv /usr/local/bin/nod* /usr/local/bin/yar* /tmp/node-* /usr/local/lib/node_modules /usr/local/bin/pnp* /usr/local/bin/less /usr/local/bin/n
     wget --no-cache https://unofficial-builds.nodejs.org/download/release/index.json -O /tmp/release.json 
     jq -r '[.[]| select(.lts!=false)]' /tmp/release.json > /tmp/release-lts.json 
     NODE_VERSION=$(jq -r '.[0].version' /tmp/release-lts.json);
