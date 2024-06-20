@@ -32,12 +32,11 @@ else
 
 
     echo -e  "\n${I_OK}    Installing package ...                                                      ${I_OK}\n";
-    npm install --global n npm nodemon pnpm less npm-check
+    npm install --global n npm pnpm less npm-check
     yarn set version stable
 
     echo -e  "\n${I_OK}    versions ...                                                                ${I_OK}\n";
     echo "nodeJS: $(node --version)"
     echo "NPM: $(npm --version)"
     echo "yarn: $(yarn --version)"
-    echo "nodemon: $(nodemon --version)"
 fi

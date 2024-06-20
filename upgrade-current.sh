@@ -37,5 +37,4 @@ else
     echo "nodeJS: $(node --version)"
     echo "NPM: $(npm --version)"
     echo "yarn: $(yarn --version)"
-    echo "nodemon: $(nodemon --version)"
 fi
