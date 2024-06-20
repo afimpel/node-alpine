@@ -37,7 +37,8 @@ else
     yarn set version stable
 
     echo -e  "\n${I_OK}    versions ...                                                                ${I_OK}\n";
-    echo "nodeJS: $(node --version)"
-    echo "NPM: $(npm --version)"
-    echo "yarn: $(yarn --version)"
+    echo -e "nodeJS:\t\t$(node --version)"
+    echo -e "NPM:\t\t$(npm --version)"
+    echo -e "yarn:\t\t$(yarn --version)\n"
+    npm -g ls
 fi
