@@ -11,8 +11,17 @@ if [ $UUID != 0 ]; then
         exit 1;
 else
     clear
-    echo "nodeJS: $(node --version)"
-    echo "NPM: $(npm --version)"
+    echo -e "\n
+                    __         _______
+   ____  ____  ____/ /__      / / ___/
+  / __ \/ __ \/ __  / _ \__  / /\__ \ 
+ / / / / /_/ / /_/ /  __/ /_/ /___/ / 
+/_/ /_/\____/\__,_/\___/\____//____/  
+\n";
+
+    echo -e "nodeJS:\t\t$(node --version)"
+    echo -e "NPM:\t\t$(npm --version)"
+    echo -e "yarn:\t\t$(yarn --version)\n"
 
     rm -vfr /usr/local/bin/nod* /usr/local/bin/yar* /tmp/node-*
     echo -e  "\n${I_OK}    GET New Version ...                                                         ${I_OK}\n";
@@ -34,7 +43,14 @@ else
     npx npm-check --global --update-all
     yarn set version stable
 
-    echo -e  "\n${I_OK}    versions ...                                                                ${I_OK}\n";
+    echo -e "\n
+                    __         _______
+   ____  ____  ____/ /__      / / ___/
+  / __ \/ __ \/ __  / _ \__  / /\__ \ 
+ / / / / /_/ / /_/ /  __/ /_/ /___/ / 
+/_/ /_/\____/\__,_/\___/\____//____/  
+";
+    echo -e  "${I_OK}    versions ...                                                                  ${I_OK}\n";
     echo -e "nodeJS:\t\t$(node --version)"
     echo -e "NPM:\t\t$(npm --version)"
     echo -e "yarn:\t\t$(yarn --version)\n"

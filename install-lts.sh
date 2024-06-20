@@ -10,6 +10,7 @@ if [ $UUID != 0 ]; then
         echo "${I_KO}    Start the Script as 'root' for it to work properly    ${I_KO}";
         exit 1;
 else
+    clear
     apk add jq bash curl
     rm -frv /usr/local/bin/nod* /usr/local/bin/yar* /tmp/node-* /usr/local/lib/node_modules 
     rm -frv /usr/local/bin/pnp* /usr/local/bin/less /usr/local/bin/n
@@ -36,7 +37,14 @@ else
     npm install --global n npm less npm-check nodemon
     yarn set version stable
 
-    echo -e  "\n${I_OK}    versions ...                                                                ${I_OK}\n";
+    echo -e "\n
+                    __         _______
+   ____  ____  ____/ /__      / / ___/
+  / __ \/ __ \/ __  / _ \__  / /\__ \ 
+ / / / / /_/ / /_/ /  __/ /_/ /___/ / 
+/_/ /_/\____/\__,_/\___/\____//____/  
+";
+    echo -e  "${I_OK}    versions ...                                                                  ${I_OK}\n";
     echo -e "nodeJS:\t\t$(node --version)"
     echo -e "NPM:\t\t$(npm --version)"
     echo -e "yarn:\t\t$(yarn --version)\n"
