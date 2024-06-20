@@ -50,7 +50,7 @@ else
  / / / / /_/ / /_/ /  __/ /_/ /___/ / 
 /_/ /_/\____/\__,_/\___/\____//____/  
 ";
-    echo -e  "${I_OK}    versions ...                                                                  ${I_OK}\n";
+    echo -e  "${I_OK}    versions ...                                                                ${I_OK}\n";
     echo -e "nodeJS:\t\t$(node --version)"
     echo -e "NPM:\t\t$(npm --version)"
     echo -e "yarn:\t\t$(yarn --version)\n"
