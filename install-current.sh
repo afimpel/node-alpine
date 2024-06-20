@@ -33,7 +33,7 @@ else
     clear
 
     echo -e  "\n${I_OK}    Installing package ...                                                      ${I_OK}\n";
-    npm install --global n npm pnpm less npm-check nodemon
+    npm install --global n npm less npm-check nodemon
     yarn set version stable
 
     echo -e  "\n${I_OK}    versions ...                                                                ${I_OK}\n";
